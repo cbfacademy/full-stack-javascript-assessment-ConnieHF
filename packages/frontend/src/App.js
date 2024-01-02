@@ -56,11 +56,15 @@ function App() {
 
   return (
     //fragment <> instead of div to combine elements
-    <>
+    <div className="routine-app">
+      <h1 className="header">Quote of the Day...</h1>
       <NewRoutineForm onSubmit={addRoutine} />
-      <h1 className="header">Daliy Routine</h1>
-      <RoutineList routines={routines} toggleRoutine={toggleRoutine} deleteRoutine={deleteRoutine} />
-  </>
+      <h1 className="header">Daily Routine</h1>
+      <RoutineList 
+        routines={routines} 
+        toggleRoutine={toggleRoutine} 
+        deleteRoutine={deleteRoutine} />
+    </div>
   )
 }
 

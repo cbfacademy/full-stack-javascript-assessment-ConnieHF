@@ -1,6 +1,6 @@
 import RoutineItem from "./RoutineItem"
 
-function RoutineList({ routines, toggleRoutine, deleteRoutine }) {
+function RoutineList({ routines, toggleRoutine, editRoutine, deleteRoutine }) {
     return (
     <ul className="list">
     {/* message for when the routine list is empty, using short circuting */}
@@ -16,6 +16,7 @@ function RoutineList({ routines, toggleRoutine, deleteRoutine }) {
                 // unique key - key={routine.id} - prop so that items to be modified can be identified
                 key={routine.id}
                 toggleRoutine={toggleRoutine}
+                editRoutine={editRoutine}
                 deleteRoutine={deleteRoutine} />
         )
       })}

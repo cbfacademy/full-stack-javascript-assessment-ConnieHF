@@ -1,6 +1,9 @@
-function RoutineItem({ completed, id, title, toggleRoutine, deleteRoutine }) {
+import { FaEdit } from "react-icons/fa";
+import { FaRegTimesCircle } from "react-icons/fa";
+
+function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteRoutine }) {
     return (
-        <li>
+        <li className="routine-item">
             <label>
               <input 
                 type="checkbox" 
@@ -10,11 +13,17 @@ function RoutineItem({ completed, id, title, toggleRoutine, deleteRoutine }) {
               />
               {title}
             </label>
-            {/* onClick event listener for delete button passes a function which calls the deleteRoutine function */}
-            <button 
+            {/* onClick passes an arrow function which calls the relevant function */}
+            <div className="icons">
+              <FaEdit 
+                className="edit-icon"
+                onClick={() => editRoutine(id)}
+              />
+              <FaRegTimesCircle 
+                className="delete-icon"
                 onClick={() => deleteRoutine(id)}
-                className="btn btn-danger">Delete
-            </button>
+              />
+            </div>
           </li>
     )
 }
