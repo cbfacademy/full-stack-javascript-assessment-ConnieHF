@@ -1,35 +1,30 @@
 import { useState } from "react"
 
-function EditRoutineForm({onSubmit}) {
-    const [editItem, setEditItem] = useState("")
+function EditRoutineForm({editRoutine, routine}) {
+    const [newItem, setNewItem] = useState(routine.title)
 
 // function to use with the onSubmit event listener to enable the 'Add' button
 function handleSubmit(e) {
     //prevent page from refreshing
     e.preventDefault()
-    if (editItem === "") return
+    //if (newItem === "") return
 
-    // onSubmit is the editRoutine function from App.js
-    // can also be written props.onSubmit with 'function EditRoutineForm(props)' above
-    onSubmit(editItem)
-    
+    editRoutine(newItem, routine.id)
+
   // set setNewItem to an empty array to clear the previous item typed in
-    setEditItem("")
+    setNewItem("")
   }
 
     return (
     <form onSubmit={handleSubmit} className="new-item-form">
-    {/* <div className="form-row">
-      <label htmlFor="item">New Item</label> */}
-      <input 
-        value={editItem} 
+      <input
+        className="new-item-input"
+        placeholder="Update a routine"
+        value={newItem}
         // onChange is called every time a key is clicked
-        onChange={e => setEditItem(e.target.value)} 
+        onChange={e => setNewItem(e.target.value)}
         type="text" 
-        id="item" 
-        placeholder="Update routine"
-        />
-    {/* </div> */}
+        id="item" />
     <button className="btn">Update</button>
     </form>
     )

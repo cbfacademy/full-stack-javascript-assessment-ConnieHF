@@ -1,25 +1,27 @@
 import React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
 
 import "./App.css"
 
 function App() {
-  const [routines, setRoutines] = useState(() => {
-    // to get items from local storage (replace this with MongoDB)
-    const localValue = localStorage.getItem("ITEMS")
-    if(localValue == null) return []
+  const [routines, setRoutines] = useState([])
 
-    return JSON.parse(localValue)
-    }
-    )
+  // const [routines, setRoutines] = useState(() => {
+  //   // to get items from local storage (replace this with MongoDB)
+  //   const localValue = localStorage.getItem("ITEMS")
+  //   if(localValue == null) return []
 
-  // to place items in local storage (replace this with MongoDB)
-  useEffect(() => {
-    localStorage.setItem("ITEMS", JSON.stringify(routines))
-  }, [routines] // useEffect runs function () every time routines changes
-  )
+  //   return JSON.parse(localValue)
+  //   }
+  //   )
+
+  // // to place items in local storage (replace this with MongoDB)
+  // useEffect(() => {
+  //   localStorage.setItem("ITEMS", JSON.stringify(routines))
+  // }, [routines] // useEffect runs function () every time routines changes
+  // )
 
   // function for NewRoutineForm routines state
   function addRoutine(title) {
@@ -54,6 +56,32 @@ function App() {
     })
   }
 
+  function editRoutine(id) {
+    setRoutines(currentRoutines => {
+      return currentRoutines.map(routine => {
+        // check the id from the onChange event
+        if (routine.id === id) {
+          // to change state, a new state object (...routine) needs to be created to change one property (completed), then return the new updated routine
+          return {...routine, isEditing: !routine.isEditing}
+        }
+        return routine
+      })
+    })
+  }
+
+  function editItem(title, id) {
+    setRoutines(currentRoutines => {
+      return currentRoutines.map(routine => {
+        // check the id from the onChange event
+        if (routine.id === id) {
+          // to change state, a new state object (...routine) needs to be created to change one property (completed), then return the new updated routine
+          return {...routine, title, isEditing: !routine.isEditing}
+        }
+        return routine
+      })
+    })
+  }
+
   return (
     //fragment <> instead of div to combine elements
     <div className="routine-app">
@@ -63,6 +91,8 @@ function App() {
       <RoutineList 
         routines={routines} 
         toggleRoutine={toggleRoutine} 
+        editRoutine={editRoutine}
+        editItem={editItem} 
         deleteRoutine={deleteRoutine} />
     </div>
   )
