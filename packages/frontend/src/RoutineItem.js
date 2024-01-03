@@ -23,6 +23,7 @@ function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteR
                 className="delete-icon"
                 onClick={() => deleteRoutine(id)}
               />
+              {/* {id} */}
             </div>
           </li>
     )

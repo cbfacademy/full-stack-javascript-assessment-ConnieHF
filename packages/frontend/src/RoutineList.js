@@ -1,11 +1,15 @@
 import RoutineItem from "./RoutineItem"
+import EditRoutineForm from "./EditRoutineForm"
 
-function RoutineList({ routines, toggleRoutine, editRoutine, deleteRoutine }) {
+function RoutineList({ routines, toggleRoutine, editRoutine, editItem, deleteRoutine }) {
     return (
     <ul className="list">
     {/* message for when the routine list is empty, using short circuting */}
       {routines.length === 0 && "No Routines"}
       {routines.map(routine => {
+                if (routine.isEditing === true) {
+                return  <EditRoutineForm editRoutine={editItem} routine={routine}/>
+                }
         return (
             <RoutineItem 
             // pass all the props of routine by spreading routine

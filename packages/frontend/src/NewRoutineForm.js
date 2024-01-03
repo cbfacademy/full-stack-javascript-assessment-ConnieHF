@@ -19,16 +19,14 @@ function handleSubmit(e) {
 
     return (
     <form onSubmit={handleSubmit} className="new-item-form">
-    {/* <div className="form-row">
-      <label htmlFor="item">New Item</label> */}
       <input
         className="new-item-input"
         placeholder="Add a new routine"
         value={newItem}
         // onChange is called every time a key is clicked
         onChange={e => setNewItem(e.target.value)}
-        type="text" id="item" />
-    {/* </div> */}
+        type="text" 
+        id="item" />
     <button className="btn">Add</button>
     </form>
     )
