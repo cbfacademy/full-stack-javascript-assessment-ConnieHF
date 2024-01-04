@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    background: #625ac4;
+    width: 350px;
+    border-radius: 15px;
+}
+
+.quote {
+    padding: 30px 35px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.line {
+    width: 300px;
+    height: 1.5px;
+    background: #fff;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.author {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.quote-icons {
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    cursor: pointer;
+}

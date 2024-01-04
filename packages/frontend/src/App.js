@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react"
 import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
+import DailyQuote from "./daily_quotes/QuoteApp"
 
 import "./App.css"
 
@@ -14,8 +15,7 @@ function App() {
   //   if(localValue == null) return []
 
   //   return JSON.parse(localValue)
-  //   }
-  //   )
+  //   })
 
   // // to place items in local storage (replace this with MongoDB)
   // useEffect(() => {
@@ -86,6 +86,8 @@ function App() {
     //fragment <> instead of div to combine elements
     <div className="routine-app">
       <h1 className="header">Quote of the Day...</h1>
+      <DailyQuote />
+      {/* <button className="btn-quote">Generate New Quote</button> */}
       <NewRoutineForm onSubmit={addRoutine} />
       <h1 className="header">Daily Routine</h1>
       <RoutineList 
