@@ -87,7 +87,6 @@ function App() {
     <div className="routine-app">
       <h1 className="header">Quote of the Day...</h1>
       <DailyQuote />
-      {/* <button className="btn-quote">Generate New Quote</button> */}
       <NewRoutineForm onSubmit={addRoutine} />
       <h1 className="header">Daily Routine</h1>
       <RoutineList 

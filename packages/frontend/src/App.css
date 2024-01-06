@@ -89,10 +89,13 @@ body {
   background: hsl(0, 100%, 40%, 0.2);
 } */
 
-.routine-item {
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.routine-item {
   background: #8758ff;
   color: #fff;
   padding: 0.75rem 1rem;
@@ -122,13 +125,21 @@ body {
   margin-bottom: 0.5rem; */
 }
 
-.delete-icon {
-  margin-left: 0.75rem;
-}
+/* label {
+  position: fixed;
+} */
+
+/* .icons {
+  float: right;
+} */
 
 .edit-icon,
 .delete-icon {
   cursor: pointer;
+}
+
+.delete-icon {
+  margin-left: 0.75rem;
 }
 
 .list {
@@ -193,7 +204,6 @@ body {
 
 .list li:has(input:checked) label::before {
   content: "✔";
-  /* background: hsl(200, 100%, 40%); */
   background: #1A1A40;
   color: hsl(200, 100%, 90%);
   font-size: 0.75rem;
