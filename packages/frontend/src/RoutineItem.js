@@ -1,9 +1,12 @@
 import { FaEdit } from "react-icons/fa";
 import { FaRegTimesCircle } from "react-icons/fa";
+import PomTimer from "./pom_timer/TimerApp"
+
 
 function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteRoutine }) {
     return (
         <li className="routine-item">
+          <div className="wrapper">
             <label>
               <input 
                 type="checkbox" 
@@ -23,7 +26,10 @@ function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteR
                 className="delete-icon"
                 onClick={() => deleteRoutine(id)}
               />
-              {/* {id} */}
+            </div>
+          </div>
+            <div className="timer-body">
+              <PomTimer />
             </div>
           </li>
     )
