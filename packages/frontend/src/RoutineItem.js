@@ -29,6 +29,7 @@ function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteR
             </div>
           </div>
             <div className="timer-body">
+              {/* ****Use a ternary to show or hide the timer (if necessay)**** */}
               <PomTimer />
             </div>
           </li>
