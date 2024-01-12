@@ -8,8 +8,8 @@ function Settings() {
     const settingsInfo = useContext(SettingsContext)
     return (
         <div style={{textAlign:'left'}}>
-
-            <div className="label">work: {settingsInfo.workMinutes}:00 minutes</div>
+        <h2>Settings</h2>
+            <div className="label">work: {settingsInfo.workMinutes} minutes</div>
                 {/* slider for work minutes */}
                 <ReactSlider 
                     className={'slider'}
@@ -21,7 +21,7 @@ function Settings() {
                     max={120} // 2 hours
                 />
 
-            <div className="label">break: {settingsInfo.breakMinutes}:00 minutes</div>
+            <div className="label">break: {settingsInfo.breakMinutes} minutes</div>
                 {/* slider for break minutes */}
                 <ReactSlider 
                     className={'slider green'}

@@ -16,21 +16,31 @@
 
 .main-div {
     padding_top: 50px;
-    max-width: 340px;
+    width: 340px;
     margin: 0 auto;
     text-align: center;
 }
 
 button {
     background-color: transparent;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9);
     border:0;
     display: inline-block;
-    width: 100px;
+    width: 60px;
     cursor: pointer;
 }
 
-button.with-text {
+button.settings {
+    color: rgba(255,255,255,0.6);
+    width: 30px;
+}
+
+button.back {
+    color: rgba(255,255,255,0.9);
+    width: 60px;
+}
+
+/* button.with-text {
     width: auto;
     background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
@@ -43,4 +53,12 @@ button.with-text svg {
     width: 36px;
     float: left;
     margin-right: 5px;
-}
+} */
+
+/* .CircularProgressbar .CircularProgressbar-path {
+    stroke: url(#gradientId);
+  } */
+
+/* .CircularProgressbar-background {
+    fill:  url(#gradientId);
+} */
