@@ -1,13 +1,12 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
+// import "./TimerApp.css"
+// import "./SVGgradient"
 import PlayButton from "./PlayButton"
 import PauseButton from "./PauseButton"
 import SettingsButton from "./SettingsButton"
 import { useContext, useState, useEffect, useRef } from "react"
 import SettingsContext from "./SettingsContext"
-
-// const red = '#f54e4e';
-// const green = '#4aec8c';
 
 function Timer() {
     const settingsInfo = useContext(SettingsContext)
@@ -67,13 +66,12 @@ function Timer() {
     const totalSeconds = mode === 'work'
         ? settingsInfo.workMinutes * 60
         : settingsInfo.breakMinutes * 60;
-
     // calculate percentage of progress bar remaining
     const percentage = Math.round(secondsLeft / totalSeconds * 100)
 
     // calculate minutes and secconds to show in the progress bar
-    const minutes = Math.floor(secondsLeft / 60) // Math.floor rounds down
-        // if(minutes < 10) minutes =  '0' + minutes
+    let minutes = Math.floor(secondsLeft / 60) // Math.floor rounds down
+        if(minutes < 10) minutes =  '0' + minutes
     let seconds = secondsLeft % 60
         if(seconds < 10) seconds = '0' + seconds
 
@@ -81,23 +79,29 @@ function Timer() {
     return (
         <div>
             {/* React Circluar Progressbar from npmjs.com */}
-            <CircularProgressbar 
-
+            <CircularProgressbar
                 value={percentage} 
                 text={minutes + ':' + seconds}
+                strokeWidth={2}
+                background={true}
+                backgroundPadding={10}
                 styles={buildStyles({
                         // rotation, strokeLinecap,
-                        textColor:'#fff',
-                        pathColor:mode === 'work' ? '#f54e4e' : '#4aec8c',
-                        trailColor:'rgba(255,255,255,.2)', // grey
+                        pathColor:mode === 'work' ? '#f54e4e' : '#4aec8c', // red, green
+                        textColor: '#fff',
+                        trailColor:'rgba(255,255,255,.2)', // transparent white
+                        backgroundColor:'#1A1A40',
+                        // gradientTransform: 90,
+                        // startColor: '#fff',
+                        // endColor: '#000',
                         })}
             />
-            <div style={{marginTop:'20px'}}>
-                {isPaused 
+            <div style={{marginTop:'-115px'}}>
+                {isPaused
                     ? <PlayButton onClick={() => { setIsPaused(false); isPausedRef.current = false; }} /> 
                     : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />} 
             </div>
-            <div style={{marginTop:'20px'}}>
+            <div style={{marginTop:'80px'}}>
                 <SettingsButton onClick={() => {settingsInfo.setShowSettings(true)}}/>
             </div>
         </div>
