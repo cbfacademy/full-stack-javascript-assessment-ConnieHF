@@ -8,10 +8,12 @@
 }
 
 body {
-  background: #8758ff;
+  background: #000;
+  overflow:hidden;
+  /* background: #8758ff; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   /* background: #333;
   color: hsl(200, 100%, 90%);
   max-width: 400px;
@@ -19,11 +21,18 @@ body {
   margin: 0 auto; */
 }
 
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
 .routine-app {
   background: #1A1A40;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
+  position: relative;
+  z-index: 2;
 }
 
 .new-item-form {

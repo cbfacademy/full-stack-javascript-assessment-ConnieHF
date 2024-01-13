@@ -3,8 +3,8 @@ import { useState } from "react"
 import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
 import DailyQuote from "./daily_quotes/QuoteApp"
-
 import "./App.css"
+import Navbar from "./sections/Navbar"
 
 function App() {
   const [routines, setRoutines] = useState([])
@@ -84,6 +84,10 @@ function App() {
 
   return (
     //fragment <> instead of div to combine elements
+    <body>
+    <div className="navbar">
+      <Navbar />
+    </div>
     <div className="routine-app">
       <h1 className="header">Quote of the Day...</h1>
       <DailyQuote />
@@ -96,6 +100,7 @@ function App() {
         editItem={editItem} 
         deleteRoutine={deleteRoutine} />
     </div>
+    </body>
   )
 }
 
