@@ -1,5 +1,5 @@
 import ReactSlider from 'react-slider' // imported slider
-import "./Slider.css"
+import "./SettingsSlider.css"
 import SettingsContext from "./SettingsContext"
 import { useContext } from "react"
 import BackButton from "./BackButton"

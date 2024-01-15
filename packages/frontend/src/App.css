@@ -8,12 +8,10 @@
 }
 
 body {
-  background: #fff;
-  overflow:hidden;
-  /* background: #8758ff; */
+  background: #8758ff;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   /* background: #333;
   color: hsl(200, 100%, 90%);
   max-width: 400px;
@@ -21,18 +19,11 @@ body {
   margin: 0 auto; */
 }
 
-.navbar {
-  position: relative;
-  z-index: 1;
-}
-
 .routine-app {
   background: #1A1A40;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
-  position: relative;
-  z-index: 2;
 }
 
 .new-item-form {
@@ -59,6 +50,7 @@ body {
 .new-item-input::placeholder {
   color: #ffffff4d;
 }
+
 
 /* .form-row {
   display: flex;
@@ -87,29 +79,18 @@ body {
   background: hsl(200, 100%, 50%, 0.2);
 }
 
-/* .btn.btn-danger {
-  background: hsl(0, 100%, 40%, 0.1);
-  border: 1px solid hsl(0, 100%, 40%);
-  color: hsl(0, 100%, 40%);
-} */
-
-/* .btn.btn-danger:hover,
-.btn.btn-danger:focus-visible {
-  background: hsl(0, 100%, 40%, 0.2);
-} */
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .routine-item {
   background: #8758ff;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* .new-item-form input {
@@ -119,6 +100,18 @@ body {
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
   color: hsl(200, 100%, 90%);
+} */
+
+/* .edit-item-input {
+  outline: none;
+  background: none;
+  border: 1px solid #1A1A40;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
 } */
 
 .new-item-form input:focus {
@@ -134,21 +127,19 @@ body {
   margin-bottom: 0.5rem; */
 }
 
-/* label {
-  position: fixed;
-} */
-
-/* .icons {
-  float: right;
-} */
-
 .edit-icon,
-.delete-icon {
+.delete-icon 
+.timer-icon {
   cursor: pointer;
+}
+
+.edit-icon {
+  margin-left: 0.75rem;
 }
 
 .delete-icon {
   margin-left: 0.75rem;
+  color: red;
 }
 
 .list {
@@ -177,9 +168,10 @@ body {
 
 .list li label {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   cursor: pointer;
   align-items: center;
+  max-width: 250px;
 }
 
 /* .list li:has(input:focus-visible) label {
@@ -197,12 +189,13 @@ body {
 
 .list li label::before {
   content: "";
-  display: block;
+  /* display: block; */
   width: 0.9rem;
   height: 0.9rem;
   background: hsl(200, 100%, 90%);
-  border-radius: 0.25em;
+  border-radius: 0.15em;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
 }
