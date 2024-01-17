@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { FaRegTimesCircle } from "react-icons/fa"
 
 
-function EditRoutineForm({id, editRoutine, routine, deleteRoutine}) {
+function EditRoutineForm({editRoutine, routine, }) {
     const [newItem, setNewItem] = useState(routine.title)
 
 // function to use with the onSubmit event listener to enable the 'Add' button
@@ -20,24 +19,16 @@ function handleSubmit(e) {
     return (
     <form onSubmit={handleSubmit} className="routine-item">
       <div className="wrapper">
-      <label>
-      <input
-        className="edit-item-input"
-        placeholder="Update a routine"
-        value={newItem}
-        // onChange is called every time a key is clicked
-        onChange={e => setNewItem(e.target.value)}
-        type="text" 
-        id="item" />
-      </label>
-      <div className="icons">
-              <FaRegTimesCircle 
-                className="delete-icon"
-                onClick={() => deleteRoutine(id)}
-              />
+        <textarea
+            className="edit-item-input"
+            rows="4"
+            // onChange is called every time a key is clicked
+            onChange={e => setNewItem(e.target.value)}
+          >
+            {newItem}
+        </textarea>
+        <button className="btn">Save</button>
       </div>
-      </div>
-      <button className="btn">Update</button>
     </form>
     )
 }
