@@ -1,61 +1,58 @@
-import React, {useState } from "react"
+import React, { useState, useEffect } from "react"
 import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
 import DailyQuote from "./daily_quotes/QuoteApp"
 import "./App.css"
-// import { MongoClient } from "mongodb"
-// import uri from ".../backend/atlas.uri"
-
-
 
 function App() {
 
-  const [routines, setRoutines] = useState([])
+  // const [routines, setRoutines] = useState([])
 
-  const { MongoClient } = require("mongodb")
-  const uri = require(".../backend/atlas.uri")
+  // const { MongoClient } = require("mongodb")
+  // const uri = require("./atlas_uri.js")
   
-  console.log(uri)
+  // console.log(uri)
 
-  const client = new MongoClient(uri)
-  const dbname = "bank"
+  // const client = new MongoClient(uri)
+  // const dbname = "bank"
 
-  const connectToDatabase = async () => {
-    try {
-      await client.connect();
-      console.log(`Connected to the ${dbname} database`);
-    } catch (err) {
-      console.error(`Error connecting to the database: ${err}`)
-    }
-  };
+  // const connectToDatabase = async () => {
+  //   try {
+  //     await client.connect();
+  //     console.log(`Connected to the ${dbname} database`);
+  //   } catch (err) {
+  //     console.error(`Error connecting to the database: ${err}`)
+  //   }
+  // };
 
-  const main = async () => {
-    try {
-      await connectToDatabase();
-    } catch (err) {
-      console.error(`Error connecting to the database: ${err}`);
-    } finally {
-      await client.close();
-    }
-  };
-  // run the main function
-  main();
+  // const main = async () => {
+  //   try {
+  //     await connectToDatabase();
+  //   } catch (err) {
+  //     console.error(`Error connecting to the database: ${err}`);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // };
+  // // run the main function
+  // main();
 
 
-  // const [routines, setRoutines] = useState(() => {
-  //   // to get items from local storage (replace this with MongoDB)
-  //   const localValue = localStorage.getItem("ITEMS")
-  //   if(localValue == null) return []
+  const [routines, setRoutines] = useState(() => {
+    // to get items from local storage (replace this with MongoDB)
+    const localValue = localStorage.getItem("ITEMS")
+    if(localValue == null) return []
 
-  //   return JSON.parse(localValue)
-  //   })
+    return JSON.parse(localValue)
+    })
 
-  // // to place items in local storage (replace this with MongoDB)
-  // useEffect(() => {
-  //   localStorage.setItem("ITEMS", JSON.stringify(routines))
-  // }, [routines] // useEffect runs function () every time routines changes
-  // )
+  // to place items in local storage (replace this with MongoDB)
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(routines))
+  }, [routines] // useEffect runs function () every time routines changes
+  )
 
+  
   // function for NewRoutineForm routines state
   function addRoutine(title) {
     // the arrow function modifies the current value (currentRoutines) to return the new value of setRoutines
