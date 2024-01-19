@@ -3,9 +3,44 @@ import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
 import DailyQuote from "./daily_quotes/QuoteApp"
 import "./App.css"
+// import { MongoClient } from "mongodb"
+// import uri from ".../backend/atlas.uri"
+
+
 
 function App() {
+
   const [routines, setRoutines] = useState([])
+
+  const { MongoClient } = require("mongodb")
+  const uri = require(".../backend/atlas.uri")
+  
+  console.log(uri)
+
+  const client = new MongoClient(uri)
+  const dbname = "bank"
+
+  const connectToDatabase = async () => {
+    try {
+      await client.connect();
+      console.log(`Connected to the ${dbname} database`);
+    } catch (err) {
+      console.error(`Error connecting to the database: ${err}`)
+    }
+  };
+
+  const main = async () => {
+    try {
+      await connectToDatabase();
+    } catch (err) {
+      console.error(`Error connecting to the database: ${err}`);
+    } finally {
+      await client.close();
+    }
+  };
+  // run the main function
+  main();
+
 
   // const [routines, setRoutines] = useState(() => {
   //   // to get items from local storage (replace this with MongoDB)
