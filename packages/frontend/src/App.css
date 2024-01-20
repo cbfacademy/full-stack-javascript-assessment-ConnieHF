@@ -191,7 +191,7 @@ body {
   content: "";
   width: 0.9rem;
   height: 0.9rem;
-  background: hsl(200, 100%, 90%);
+  background: #fff;
   border-radius: 0.15em;
   display: flex;
   flex-shrink: 0;

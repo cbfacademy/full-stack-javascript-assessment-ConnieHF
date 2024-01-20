@@ -15,11 +15,11 @@ function PomTimer() {
             <div className="main-div">
                 {/* context passes data without having to pass props at every level */}
                 <SettingsContext.Provider value={{
-                    showSettings, 
+                    showSettings: showSettings, 
                     setShowSettings,
-                    workMinutes, // same as workMinutes: workMinutes from useState
-                    breakMinutes, // same as breakMinutes: breakMinutes from useState
+                    workMinutes: workMinutes,
                     setWorkMinutes,
+                    breakMinutes: breakMinutes,
                     setBreakMinutes
                 }}>
                     {showSettings ? <Settings /> : <Timer />}

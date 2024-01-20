@@ -113,7 +113,9 @@ function App() {
   }
 
   return (
-    //fragment <> instead of div to combine elements
+    <body className="gradient-bg">
+      <div className="gradients-container">
+        <div className="g1"></div>
     <div className="routine-app">
       <h1 className="header">Quote of the Day...</h1>
       <DailyQuote />
@@ -126,6 +128,8 @@ function App() {
         editItem={editItem} 
         deleteRoutine={deleteRoutine} />
     </div>
+      </div>
+    </body>
   )
 }
 

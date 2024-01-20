@@ -1,6 +1,6 @@
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
+import { CircularProgressbar } from 'react-circular-progressbar'
 
-class GradientSVG extends CircularProgressbarWithChildren {
+class GradientSVG extends CircularProgressbar {
     render() {
       const { startColor, endColor, gradientId, rotation } = this.props;
   

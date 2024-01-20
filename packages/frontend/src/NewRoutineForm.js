@@ -13,7 +13,7 @@ function handleSubmit(e) {
     // can also be written props.onSubmit with 'function NewRoutineForm(props)' above
     onSubmit(newItem)
 
-  // set setNewItem to an empty array to clear the previous item typed in
+  // set setNewItem to an empty string to clear the previous item typed in
     setNewItem("")
   }
 
