@@ -1,7 +1,5 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
-// import "./TimerApp.css"
-// import "./SVGgradient"
 import PlayButton from "./PlayButton"
 import PauseButton from "./PauseButton"
 import SettingsButton from "./SettingsButton"
@@ -86,14 +84,10 @@ function Timer() {
                 background={true}
                 backgroundPadding={10}
                 styles={buildStyles({
-                        // rotation, strokeLinecap,
                         pathColor:mode === 'work' ? '#f54e4e' : '#4aec8c', // red, green
                         textColor: '#fff',
                         trailColor:'rgba(255,255,255,.2)', // transparent white
                         backgroundColor: 'rgba(0,17,82,.8)',
-                        // gradientTransform: 90,
-                        // startColor: '#fff',
-                        // endColor: '#000',
                         })}
             />
             <div style={{marginTop:'-115px'}}>

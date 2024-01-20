@@ -6,7 +6,6 @@
 }
 
 body {
-  /* background: #8758ff; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +15,6 @@ body {
   z-index: 100;
   position: absolute;
   background: rgb(26,26,64,0.3);
-  /* #1A1A40; */
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
@@ -32,7 +30,6 @@ body {
   outline: none;
   background: #001152;
   border: 3px solid #6c00a2;
-  /* #8758ff; */
   border-radius: 5px;
   padding: 0.75rem 1rem;
   margin-top: 1rem;
@@ -43,7 +40,6 @@ body {
 
 .new-item-input::placeholder {
   color: #64dcff;
-  /* #ffffff4d; */
 }
 
 .edit-item-input {
@@ -58,7 +54,6 @@ body {
   color: #fff;
   overflow: hidden;
   font-size: 1rem;
-
 }
 
 .btn {
@@ -79,7 +74,6 @@ body {
 
 .routine-item {
   background: rgb(18, 113, 255, 0.3);
-  /* #1271ff */
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
@@ -138,14 +132,7 @@ body {
   color: #c5aeff;
   text-decoration: line-through;
   cursor: pointer;
-  /* color: hsl(200, 20%, 40%); */
 }
-
-/* .list li {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-} */
 
 .list li label {
   display: flex;
@@ -154,10 +141,6 @@ body {
   align-items: center;
   max-width: 250px;
 }
-
-/* .list li:has(input:focus-visible) label {
-  outline: 1px solid hsl(200, 100%, 50%);
-} */
 
 .list li input {
   outline: none;
