@@ -10,7 +10,7 @@ function Settings() {
     return (
         <div style={{textAlign:'left'}}>
         <h2>Settings</h2>
-            <div className="label">Activity: {settingsInfo.workMinutes} minutes</div>
+            <div className="label">{settingsInfo.workMinutes} minute activity</div>
                 {/* slider for work minutes */}
                 <ReactSlider 
                     className={'slider'}

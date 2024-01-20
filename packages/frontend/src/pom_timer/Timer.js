@@ -30,8 +30,8 @@ function Timer() {
     useEffect(() => {
 
         function switchMode() {
-            // if the current mode is work, switch to break, otherwise switch to work
-            const nextMode = modeRef.current === 'work' ? 'break' : 'work'
+            // if the current mode is work, switch to break, otherwise pause
+                const nextMode = modeRef.current === 'work' ? 'break' : isPausedRef.current = true
             const nextSeconds = nextMode === 'work' 
                 ? settingsInfo.workMinutes * 60
                 : settingsInfo.breakMinutes * 60
@@ -101,7 +101,7 @@ function Timer() {
                     ? <PlayButton onClick={() => { setIsPaused(false); isPausedRef.current = false; }} /> 
                     : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />} 
             </div>
-            <div style={{marginTop:'80px'}}>
+            <div style={{marginTop:'20px'}}>
                 <SettingsButton onClick={() => {settingsInfo.setShowSettings(true)}}/>
             </div>
         </div>

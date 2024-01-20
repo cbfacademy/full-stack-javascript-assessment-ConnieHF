@@ -11,20 +11,23 @@ const DailyQuote = () => {
 
     // function to fetch json data from the api and store it in the 'quotes' variable
     async function loadQuotes() {
+        try {
         // response variable to store the response from the api
-        const response = await fetch("https://api.quotable.io/quotes/random?limit=50&maxLength=50");
+        const response = await fetch("https://api.quotable.io/quotes/random?limit=10&maxLength=50");
+        
         quotes = await response.json();
+        } catch (error) {
+            console.error(`ERROR: ${error}`)
+        }
         // when the response is received, loading is set to false
         setIsLoading(false)
     }
-    
+
     // a default message is displayed before the reload icon is clicked
     const [quote, setQuote] = useState(
-        {content: "Click reload for your quote",
-        author: ""}
-        // {content: "Those that know, do. Those that understand, teach.",
-        // author: "Aristotle"}
-    );
+        {content: "",
+        author: "- - - - - - - - - - - - get your quote >"}
+    )
 
     // randomly select a quote from the 'quotes' variable and assign it to 'quote' using setQuote
     const random = () => {
@@ -37,7 +40,7 @@ const DailyQuote = () => {
 
     return (
         <div className="container">
-            {/* <ErrorBoundary fallback="There is an error, please refresh page"> */}
+            {/* <ErrorBoundary fallback="There is an error, please refresh the page"> */}
             {/* logical and (&&), if left is true, output right  */}
             { isLoading && <div>Loading...</div> }
             <div className="quote">{quote.content}</div>
