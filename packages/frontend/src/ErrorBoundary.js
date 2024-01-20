@@ -1,4 +1,3 @@
-import React from "react"
 import App from "./App"
 
 //  when this component or a child component errors it calls the static method below
@@ -18,7 +17,7 @@ class ErrorBoundary extends App {
 
     render() {
         if (this.state.hasError) {
-            return this.props.fallback
+            return "There is an error"
         }
         return this.props.children
     }

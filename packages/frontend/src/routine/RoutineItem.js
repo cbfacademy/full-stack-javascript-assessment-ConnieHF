@@ -1,7 +1,7 @@
 import { LuClipboardEdit } from "react-icons/lu"
 import { FaRegClock } from "react-icons/fa6"
 import { FaRegTimesCircle } from "react-icons/fa"
-import PomTimer from "./pom_timer/TimerApp"
+import PomTimer from "../pom_timer/TimerApp"
 import { useState } from "react"
 
 function RoutineItem({ completed, id, title, toggleRoutine, editRoutine, deleteRoutine }) {

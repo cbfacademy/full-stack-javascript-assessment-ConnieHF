@@ -4,11 +4,12 @@ import Settings from "./Settings"
 import { useState } from "react"
 import SettingsContext from "./SettingsContext"
 
+
 function PomTimer() {
 
     const [showSettings, setShowSettings] = useState(false)
-    const [workMinutes, setWorkMinutes] = useState(1)
-    const [breakMinutes, setBreakMinutes] = useState(1)
+    const [workMinutes, setWorkMinutes] = useState(10)
+    const [breakMinutes, setBreakMinutes] = useState(5)
  
 
     return (

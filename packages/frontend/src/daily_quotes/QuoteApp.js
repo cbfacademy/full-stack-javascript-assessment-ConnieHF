@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./QuoteApp.css"
 import { TfiReload } from "react-icons/tfi";
-// import ErrorBoundary from '../ErrorBoundary';
 
 const DailyQuote = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -40,7 +39,6 @@ const DailyQuote = () => {
 
     return (
         <div className="container">
-            {/* <ErrorBoundary fallback="There is an error, please refresh the page"> */}
             {/* logical and (&&), if left is true, output right  */}
             { isLoading && <div>Loading...</div> }
             <div className="quote">{quote.content}</div>
@@ -53,7 +51,6 @@ const DailyQuote = () => {
                     </div>
                 </div>
             </div>
-            {/* </ErrorBoundary> */}
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
-import NewRoutineForm from "./NewRoutineForm"
-import RoutineList from "./RoutineList"
+import NewRoutineForm from "./routine/NewRoutineForm"
+import RoutineList from "./routine/RoutineList"
 import DailyQuote from "./daily_quotes/QuoteApp"
-import "./App.css"
-import "./BackgroundStyle.scss"
+import "./routine/App.css"
+import "./routine/BackgroundStyle.scss"
 
 function App() {
 
@@ -123,6 +123,7 @@ function App() {
         <div className="g5"></div>
       </div>
     <div className="routine-app">
+    <h1 className="header-title">Aylodie</h1>
       <h1 className="header">Quote of the Day...</h1>
       <DailyQuote />
       <NewRoutineForm onSubmit={addRoutine} />

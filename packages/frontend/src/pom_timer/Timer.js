@@ -90,7 +90,7 @@ function Timer() {
                         pathColor:mode === 'work' ? '#f54e4e' : '#4aec8c', // red, green
                         textColor: '#fff',
                         trailColor:'rgba(255,255,255,.2)', // transparent white
-                        backgroundColor:'#1A1A40',
+                        backgroundColor: 'rgba(0,17,82,.8)',
                         // gradientTransform: 90,
                         // startColor: '#fff',
                         // endColor: '#000',
