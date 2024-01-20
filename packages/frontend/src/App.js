@@ -3,6 +3,7 @@ import NewRoutineForm from "./NewRoutineForm"
 import RoutineList from "./RoutineList"
 import DailyQuote from "./daily_quotes/QuoteApp"
 import "./App.css"
+import "./BackgroundStyle.scss"
 
 function App() {
 
@@ -116,6 +117,11 @@ function App() {
     <body className="gradient-bg">
       <div className="gradients-container">
         <div className="g1"></div>
+        <div className="g2"></div>
+        <div className="g3"></div>
+        <div className="g4"></div>
+        <div className="g5"></div>
+      </div>
     <div className="routine-app">
       <h1 className="header">Quote of the Day...</h1>
       <DailyQuote />
@@ -128,7 +134,6 @@ function App() {
         editItem={editItem} 
         deleteRoutine={deleteRoutine} />
     </div>
-      </div>
     </body>
   )
 }
