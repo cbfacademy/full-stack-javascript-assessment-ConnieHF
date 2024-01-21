@@ -24,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 atlas_uri.js
+test.js
