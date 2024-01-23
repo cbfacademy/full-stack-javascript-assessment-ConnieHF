@@ -24,8 +24,8 @@ const DailyQuote = () => {
 
     // a default message is displayed before the reload icon is clicked
     const [quote, setQuote] = useState(
-        {content: "",
-        author: "- - - - - - - - - - - - get your quote >"}
+        {content: "Those that know, do. Those that understand, teach.",
+        author: "Aristotle - - - - - - get your quote >"}
     )
 
     // randomly select a quote from the 'quotes' variable and assign it to 'quote' using setQuote
