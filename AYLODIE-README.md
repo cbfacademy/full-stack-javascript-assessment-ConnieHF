@@ -36,7 +36,7 @@ Aylodie has a very easy to use user interface.
 * **Quote API** : The quotes are suppied via an API connection to [quotable](https://github.com/lukePeavey/quotable) which provides 10 random quotes from their database. Error handling is implemented, in case of a broken connection 
 * **Add and Edit Form Components** : The form components for adding and editing use handle submit functions to handle the data.
 * **Timer Component** : The timer component incorporates two installed applications -  [react progress bar](https://github.com/kevinsqi/react-circular-progressbar), for the main timer functionality, and [react slider](https://github.com/zillow/react-slider) for the settings area.
-* **Backend** : Currently using local storage, but further backend functionality will use MongoDB to store data from the routine entries.
+* **Backend** : Currently using local storage, but further backend functionality will use MongoDB to store data from the routine entries. An attempt was made to retrospectively set the application up as a MERN stack.
 
 ## 📜 App Design
 

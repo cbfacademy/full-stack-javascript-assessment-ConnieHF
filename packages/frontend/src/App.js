@@ -5,39 +5,11 @@ import DailyQuote from "./daily_quotes/QuoteApp"
 import "./routine/App.css"
 import "./routine/BackgroundStyle.scss"
 
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+// import Read from "./components/Read"
+// import Write from "./components/Write"
+
 function App() {
-
-  // const [routines, setRoutines] = useState([])
-
-  // const { MongoClient } = require("mongodb")
-  // const uri = require("./atlas_uri.js")
-  
-  // console.log(uri)
-
-  // const client = new MongoClient(uri)
-  // const dbname = "bank"
-
-  // const connectToDatabase = async () => {
-  //   try {
-  //     await client.connect();
-  //     console.log(`Connected to the ${dbname} database`);
-  //   } catch (err) {
-  //     console.error(`Error connecting to the database: ${err}`)
-  //   }
-  // };
-
-  // const main = async () => {
-  //   try {
-  //     await connectToDatabase();
-  //   } catch (err) {
-  //     console.error(`Error connecting to the database: ${err}`);
-  //   } finally {
-  //     await client.close();
-  //   }
-  // };
-  // // run the main function
-  // main();
-
 
   const [routines, setRoutines] = useState(() => {
     // to get items from local storage (replace this with MongoDB)
@@ -52,7 +24,6 @@ function App() {
     localStorage.setItem("ITEMS", JSON.stringify(routines))
   }, [routines] // useEffect runs function () every time routines changes
   )
-
   
   // function for NewRoutineForm routines state
   function addRoutine(title) {
