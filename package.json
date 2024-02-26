@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/cbfacademy/full-stack-javascript/issues"
   },
-  "homepage": "https://github.com/cbfacademy/full-stack-javascript#readme"
+  "homepage": "https://github.com/cbfacademy/full-stack-javascript#readme",
+  "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "axios": "^1.6.5",
+    "crypto-browserify": "^3.12.0",
+    "mongodb": "^6.3.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-icons": "^4.12.0",
+    "react-scripts": "^5.0.1",
+    "react-slider": "^2.0.6",
+    "sass": "^1.70.0"
+  }
 }

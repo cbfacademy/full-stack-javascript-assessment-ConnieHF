@@ -1,0 +1,40 @@
+:root {
+    --red: #f54e4e;
+    --green: #4aec8c;
+}
+
+.timer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    width: 340px;
+    border-radius: 15px;
+}
+
+.main-div {
+    padding_top: 50px;
+    width: 340px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    color: rgba(255,255,255,0.9);
+    border:0;
+    display: inline-block;
+    width: 60px;
+    cursor: pointer;
+}
+
+button.settings {
+    color: rgba(255,255,255,0.4);
+    width: 25px;
+}
+
+button.back {
+    color: rgba(255,255,255,0.9);
+    width: 60px;
+}
